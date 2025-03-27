@@ -127,7 +127,7 @@ Ensure you have the following:
 
 ## Contributors
 - **Your Name** | GitHub: [your-username](https://github.com/your-username)
-- **Company Name / Team**
+- **Computrade Technology Philippines Inc.**
 
 ---
 
@@ -140,4 +140,3 @@ Distributed under MIT License. See `LICENSE.txt` for details.
 For any issues, reach out to: 
 - Email: your-email@example.com
 - GitHub Issues: [Open an Issue](https://github.com/your-repo/aws-crud-app/issues)
-```
