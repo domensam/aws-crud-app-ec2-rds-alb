@@ -1,4 +1,4 @@
-# AWS ALB -> EC2 -> RDS Deployment
+# Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
 
 ## Overview
 This project demonstrates deploying a **simple web application** on AWS using:
