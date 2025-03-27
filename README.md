@@ -1,5 +1,5 @@
 # Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
-
+<a id="readme-top"></a>
 ## Overview
 This project demonstrates deploying a **simple web application** on AWS using:
 - **Application Load Balancer (ALB)** for distributing traffic
@@ -13,6 +13,7 @@ The setup ensures **high availability, scalability, and security**.
 ## Architecture Diagram
 ![Architecture](images/aws-architecture.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Prerequisites
@@ -23,6 +24,7 @@ Ensure you have the following:
 - **Terraform (Optional)** if deploying via Infrastructure-as-Code
 - **GitHub Repository** for version control
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Deployment Steps
@@ -87,6 +89,7 @@ Ensure you have the following:
   curl -X POST http://your-alb-dns/items -H "Content-Type: application/json" -d '{"name": "Sample Item"}'
   ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Troubleshooting & Common Issues
@@ -107,6 +110,7 @@ Ensure you have the following:
 - Check logs: `journalctl -u your-app --no-pager -n 50`
 - Verify Python dependencies: `pip install -r requirements.txt`
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Screenshots
@@ -115,6 +119,7 @@ Ensure you have the following:
 ### **AWS Console: ALB Target Group**
 ![ALB Targets](images/alb-targets.png)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Repository & Deployment Automation
@@ -123,16 +128,20 @@ Ensure you have the following:
 2. Configure **AWS IAM Role** for GitHub Actions.
 3. Automate deployments via `git push`.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## Contributors
 - **Your Name** | GitHub: [your-username](https://github.com/your-username)
 - **Computrade Technology Philippines Inc.**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 ---
 
 ## License
 Distributed under MIT License. See `LICENSE.txt` for details.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
@@ -140,3 +149,5 @@ Distributed under MIT License. See `LICENSE.txt` for details.
 For any issues, reach out to: 
 - Email: your-email@example.com
 - GitHub Issues: [Open an Issue](https://github.com/your-repo/aws-crud-app/issues)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
