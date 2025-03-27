@@ -8,13 +8,10 @@ This project demonstrates deploying a **simple web application** on AWS using:
 
 The setup ensures **high availability, scalability, and security**.
 
----
-
 ## Architecture Diagram
 ![Architecture](images/aws-architecture.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Prerequisites
 ### **Before You Begin**
@@ -25,7 +22,6 @@ Ensure you have the following:
 - **GitHub Repository** for version control
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Deployment Steps
 ### **1. Set Up AWS Resources**
@@ -90,7 +86,6 @@ Ensure you have the following:
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Troubleshooting & Common Issues
 ### **1. ALB Not Routing Traffic**
@@ -111,7 +106,6 @@ Ensure you have the following:
 - Verify Python dependencies: `pip install -r requirements.txt`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Screenshots
 ### **AWS Console: RDS Setup**
@@ -120,7 +114,6 @@ Ensure you have the following:
 ![ALB Targets](images/alb-targets.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Repository & Deployment Automation
 ### **1. GitHub Actions for CI/CD (Optional)**
@@ -129,25 +122,24 @@ Ensure you have the following:
 3. Automate deployments via `git push`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## Contributors
 - **Your Name** | GitHub: [your-username](https://github.com/your-username)
 - **Computrade Technology Philippines Inc.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
----
 
 ## License
 Distributed under MIT License. See `LICENSE.txt` for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
-
 ## Contact
-For any issues, reach out to: 
-- Email: your-email@example.com
-- GitHub Issues: [Open an Issue](https://github.com/your-repo/aws-crud-app/issues)
+Get in touch with Computrade Technology Philippines (CTP)!
+![CTP Logo](images/ctp-logo.png)
+- Website: [Computrade Technology Philippines](https://computradetech.com.ph/)
+- LinkedIn: [Computrade Technology Philippines](https://www.linkedin.com/company/computrade-technology-philippines-inc./)
+- Facebook: [Computrade Technology Philippines](https://www.facebook.com/computradetechph)
+- Instagram: [Computrade Technology Philippines](https://www.instagram.com/computradetechph/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
