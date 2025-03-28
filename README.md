@@ -1,4 +1,4 @@
-# Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
+# ⚒️ Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
 <a id="readme-top"></a>
 ## Overview
 
@@ -26,52 +26,64 @@ In this workshop, you will be able to deploy a [web application](https://github.
 ## Prerequisites
 ### 💻 Environment Setup
 To access the AWS console, use the credentials provided to you and follow the steps below:
-* 
-* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Deployment Steps
-<details>
-<summary> <h3>1. Set Up AWS Resources</h3></summary>
+### 1. Set Up AWS Resources
+#### A. Create RDS Database
 
-<h4>A. Create RDS Database</h4>
+1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
+<img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
+
+2. Select the option <strong>"Databases"</strong> on the lefthand side of the page.
+<img width="1446" alt="Screenshot 2025-03-28 at 3 01 03 PM" src="https://github.com/user-attachments/assets/0b36e6c4-54c1-4744-8f6a-9d37ec0e75da" /><br />
+
+3. Select the <strong>"Create Database"</strong> button on the righthand side of the page.
+<img width="1468" alt="Screenshot 2025-03-28 at 3 07 20 PM" src="https://github.com/user-attachments/assets/21ab028c-0126-445a-ad0a-042a61a88955" /><br />
+
+4. Select <strong>"PostgreSQL"</strong> for the Engine Type and leave "Standard Create" for the Creation Method 
+<img width="1453" alt="Screenshot 2025-03-28 at 3 36 19 PM" src="https://github.com/user-attachments/assets/35319eab-6b51-433b-b11f-f3a66e9908bc" /><br />
+
+5. Select <strong>"Free Tier"</strong> option in the "Templates" section.
+<img width="1453" alt="Screenshot 2025-03-28 at 3 40 43 PM" src="https://github.com/user-attachments/assets/d9736850-b545-421c-8be5-ff815db46dc4" /><br />
+
+6. Select <strong>"Self managed"</strong> on the Credentials Management section. Then, input the following on the specified text fields:
+```sh
+DB Instance Identifier = "fil"
+Master username = "root"
+Master password = "ustworkshop"
+Confirm password = "ustworkshop"
+```
+<img width="1456" alt="Screenshot 2025-03-28 at 3 51 59 PM" src="https://github.com/user-attachments/assets/0e442df0-daba-4249-ac8c-1cb982ff4d47" /><br />
+
+#### B. Create EC2 Instances
+
+#### C. Set Up Application Load Balancer (ALB)
 
 Sample description
 
-B. Create EC2 Instances
-
-Sample description
-
-C. Set Up Application Load Balancer (ALB)
-
-Sample description
-</details>
-
-<details>
-<summary> <h3>2. Deploy Application to EC2</h3></summary>
-<h4>1. Connect to your instances using "EC2 instance connect"</h4>
-<h4>2. Install dependencies</h4>
+### 2. Deploy Application to EC2
+#### 1. Connect to your instances using "EC2 instance connect"
+#### 2. Install dependencies</h4>
 ```sh
 sudo yum update -y
 sudo yum install python3 pip -y
 ```
-<h4>3. Clone the repository</h4>
+#### 3. Clone the repository
 ```sh
 git clone https://github.com/your-repo/aws-crud-app.git
 cd aws-crud-app
 ```
-<h4>4. Set environment variables</h4>
+#### 4. Set environment variables
 ```sh
 export DB_HOST="your-rds-endpoint"
 export DB_USER="your-db-username"
 export DB_PASSWORD="your-db-password"
 ```
-<h4>5. Run the application</h4>
-</details>
+#### 5. Run the application
 
-<details>
-<summary> <h3>3. Test the Setup</h3></summary>
+### 3. Test the Setup
    - Open **ALB DNS URL** in a browser.
    - Use **Postman or cURL** to test CRUD operations:
   ```sh
@@ -79,14 +91,13 @@ export DB_PASSWORD="your-db-password"
   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-</details>
 
 ## Troubleshooting & Common Issues
-### **1. ALB Not Routing Traffic**
+### 1. ALB Not Routing Traffic
 - Ensure EC2 **Security Group allows ALB inbound traffic** on port **5000**.
 - Verify **Target Group health checks** are passing.
 
-### **2. RDS Connection Errors**
+### 2. RDS Connection Errors
 - Ensure RDS **Public Access** is enabled (for testing).
 - Check **Security Group** allows **EC2 IP access on port 3306/5432**.
 - Use:
@@ -95,7 +106,7 @@ export DB_PASSWORD="your-db-password"
   ```
   to test connectivity.
 
-### **3. Application Not Starting**
+### 3. Application Not Starting
 - Check logs: `journalctl -u your-app --no-pager -n 50`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
