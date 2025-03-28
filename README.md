@@ -32,35 +32,40 @@ To access the AWS console, use the credentials provided to you and follow the st
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Deployment Steps
+### 1. Set Up AWS Resources
+
 <details>
-### <summary>1. Set Up AWS Resources</summary>
-#### **A. Create RDS Database**
-1. Go to AWS **RDS Console**.
-2. Click **Create Database** → Select **MySQL/PostgreSQL**.
-3. Choose **DB Instance Class** (e.g., `db.t3.micro`).
-4. Set database credentials (`DB_USER`, `DB_PASSWORD`).
-5. Enable **Public Access** (for testing, restrict later via Security Groups).
-6. Click **Create Database**.
-
-#### **B. Create EC2 Instances**
-1. Go to AWS **EC2 Console**.
-2. Click **Launch Instance** → Choose **Amazon Linux 2** (or Ubuntu).
-3. Select **Instance Type** (`t3.micro` for free tier).
-4. Attach **IAM Role** with RDS access.
-5. Configure **Security Groups**:
-   - Allow **port 22 (SSH)** (your IP only)
-   - Allow **port 5000 (app port)** from ALB
-6. Click **Launch**.
-
-#### **C. Set Up Application Load Balancer (ALB)**
-1. Go to AWS **EC2 Console → Load Balancers**.
-2. Click **Create Load Balancer** → Choose **Application Load Balancer**.
-3. Configure:
-   - **Listener**: HTTP (port 80)
-   - **Target Group**: Attach **EC2 instances**
-   - **Health Check Path**: `/health` (or `/` if not defined)
-4. Click **Create Load Balancer**.
+<summary>**A. Create RDS Database**</summary>
+   1. Go to AWS **RDS Console**.
+   2. Click **Create Database** → Select **MySQL/PostgreSQL**.
+   3. Choose **DB Instance Class** (e.g., `db.t3.micro`).
+   4. Set database credentials (`DB_USER`, `DB_PASSWORD`).
+   5. Enable **Public Access** (for testing, restrict later via Security Groups).
+   6. Click **Create Database**.
 </details>
+<details>
+<summary>**B. Create EC2 Instances**</summary>
+   1. Go to AWS **EC2 Console**.
+   2. Click **Launch Instance** → Choose **Amazon Linux 2** (or Ubuntu).
+   3. Select **Instance Type** (`t3.micro` for free tier).
+   4. Attach **IAM Role** with RDS access.
+   5. Configure **Security Groups**:
+      - Allow **port 22 (SSH)** (your IP only)
+      - Allow **port 5000 (app port)** from ALB
+   6. Click **Launch**.
+</details>
+
+<details>
+   <summary>**C. Set Up Application Load Balancer (ALB)**</summary>
+   1. Go to AWS **EC2 Console → Load Balancers**.
+   2. Click **Create Load Balancer** → Choose **Application Load Balancer**.
+   3. Configure:
+      - **Listener**: HTTP (port 80)
+      - **Target Group**: Attach **EC2 instances**
+      - **Health Check Path**: `/health` (or `/` if not defined)
+   4. Click **Create Load Balancer**.
+</details>
+
 ### **2. Deploy Application to EC2**
 1. **SSH into EC2 instance**:
    ```sh
