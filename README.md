@@ -24,12 +24,10 @@ In this workshop, you will be able to deploy a [web application](example.com) on
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Prerequisites
-### **Before You Begin**
+### **Environment Setupn**
 Ensure you have the following:
 - **AWS Account** with admin privileges
 - **AWS CLI** installed and configured (`aws configure`)
-- **Terraform (Optional)** if deploying via Infrastructure-as-Code
-- **GitHub Repository** for version control
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,25 +115,11 @@ Ensure you have the following:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Screenshots
-### **AWS Console: RDS Setup**
-![RDS Setup](images/rds-setup.png)
-### **AWS Console: ALB Target Group**
-![ALB Targets](images/alb-targets.png)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Repository & Deployment Automation
 ### **1. GitHub Actions for CI/CD (Optional)**
 1. Create `.github/workflows/deploy.yml` with deployment steps.
 2. Configure **AWS IAM Role** for GitHub Actions.
 3. Automate deployments via `git push`.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Contributors
-- **Your Name** | GitHub: [your-username](https://github.com/your-username)
-- **Computrade Technology Philippines Inc.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
