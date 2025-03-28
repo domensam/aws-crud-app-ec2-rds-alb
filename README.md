@@ -24,15 +24,16 @@ In this workshop, you will be able to deploy a [web application](example.com) on
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Prerequisites
-### **Environment Setupn**
-Ensure you have the following:
-- **AWS Account** with admin privileges
-- **AWS CLI** installed and configured (`aws configure`)
+### 💻 Environment Setup
+To access the AWS console, use the credentials provided to you and follow the steps below:
+* 
+* 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Deployment Steps
-### **1. Set Up AWS Resources**
+<details>
+### <summary>1. Set Up AWS Resources</summary>
 #### **A. Create RDS Database**
 1. Go to AWS **RDS Console**.
 2. Click **Create Database** → Select **MySQL/PostgreSQL**.
@@ -59,7 +60,7 @@ Ensure you have the following:
    - **Target Group**: Attach **EC2 instances**
    - **Health Check Path**: `/health` (or `/` if not defined)
 4. Click **Create Load Balancer**.
-
+</details>
 ### **2. Deploy Application to EC2**
 1. **SSH into EC2 instance**:
    ```sh
