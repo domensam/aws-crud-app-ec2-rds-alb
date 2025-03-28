@@ -6,7 +6,7 @@
 We are familiar with the demand on modern web application, even if its incoming/outgoing traffic **increase or decrease dramatically**, our application should **stay online without crashing**. To achieve this, we can **spread the workload across multiple servers** and use AWS managed services to keep things running smoothly.
 
 ### 📚 What are we going to learn? </br>
-In this workshop, you will be able to deploy a [web application](example.com) on AWS and keep it highly available. Don't worry, we will guide you along the way!
+In this workshop, you will be able to deploy a [web application](https://github.com/jcmsj/ust-workshop.git) on AWS and keep it highly available. Don't worry, we will guide you along the way!
 - Use **Application Load Balancer (ALB)** for distributing traffic
 - Provision **Two EC2 instances** running the same backend application
 - Setup **Amazon RDS** as the database backend
