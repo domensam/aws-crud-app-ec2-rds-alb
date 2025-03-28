@@ -37,7 +37,7 @@ To access the AWS console, use the credentials provided to you and follow the st
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Deployment Steps
-### 1. Set Up AWS Resources
+### Step 1 - Set Up AWS Resources
 #### A. Create RDS Database
 
 1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
@@ -78,6 +78,39 @@ Confirm password = "ustworkshop"
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 #### B. Create EC2 Instances
+1. On the console search bar, enter "ec2" and <strong>select the "EC2"</strong> on the resulting options.
+<img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
+
+2. Select the <strong>"Launch Instance" button</strong> on the righthand side of the page.
+<img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
+
+3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI, and declare <strong>2 instances</strong> on the summary tab.
+<img width="1458" alt="Screenshot 2025-03-28 at 5 41 19 PM" src="https://github.com/user-attachments/assets/d8480d08-6a44-4a5a-91d3-3955b470206f" /><br />
+
+4. Select <strong>"Proceed without a key pair"</strong> on the Key Pair (login) section. Make sure that <strong>"t2.micro"</strong> is selected on the instance type.
+<img width="1456" alt="Screenshot 2025-03-28 at 5 47 06 PM" src="https://github.com/user-attachments/assets/8d931582-4b29-4eae-91b9-dc142c9311bd" /><br />
+
+5. Scroll down to the Network Settings section, select the <strong>Edit</strong> button on its top right side.
+<img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/ed5a9786-2800-4771-bd13-811d906e315f" /><br />
+
+6. In the VPC and subnets dropdowns, select the <strong>specified VPC and specified subnet</strong>.
+<img width="1456" alt="Screenshot 2025-03-28 at 5 56 33 PM" src="https://github.com/user-attachments/assets/6941469b-71c5-4ab9-ba9d-0a7eaa3d3b65" /><br />
+
+7. Choose the <strong>"Select existing security group"</strong> option, and select the <strong>specified security group</strong> in the security groups dropdown.
+<img width="1456" alt="Screenshot 2025-03-28 at 6 00 44 PM" src="https://github.com/user-attachments/assets/86edba1e-d921-4713-b2ce-32dcabb6f05a" /><br />
+
+8. Scroll down to the bottom, and click the <strong>"Advanced Details"</strong> dropdown.
+<img width="1456" alt="Screenshot 2025-03-28 at 6 07 30 PM" src="https://github.com/user-attachments/assets/2be6868d-52c9-4a4a-a4c8-46b5ec159b6e" /><br />
+
+10. Scroll down (i know, again) to the bottom, and paste [this](https://github.com/jcmsj/ust-workshop/blob/main/sudoaws.sh) in the user data text box.
+<img width="1456" alt="Screenshot 2025-03-28 at 6 10 05 PM" src="https://github.com/user-attachments/assets/68339b03-55ab-4550-8908-8a417ea97d43" /><br />
+
+11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
+<img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
+
+> Note: Make sure to get a <strong>green banner</strong> like this, initiating a successful creation of 2 instances! ✅<br />
+>
+> <img width="1456" alt="Screenshot 2025-03-28 at 6 17 42 PM" src="https://github.com/user-attachments/assets/1f9f7209-6014-43ce-8d94-7b2bca2c9d36" />
 
 #### C. Set Up Application Load Balancer (ALB)
 
@@ -88,7 +121,7 @@ Sample description
 #### 2. Install dependencies</h4>
 ```sh
 sudo yum update -y
-sudo yum install python3 pip -y
+sudo yum install ...
 ```
 #### 3. Clone the repository
 ```sh
