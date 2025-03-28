@@ -2,17 +2,17 @@
 <a id="readme-top"></a>
 ## Overview
 
-📌 What are we trying to achive?
+### 📌 What are we trying to achive?
 We are familiar with the demand on modern web application, even if its incoming/outgoing traffic **increase or decrease dramatically**, our application should **stay online without crashing**. To achieve this, we can **spread the workload across multiple servers** and use AWS managed services to keep things running smoothly.
 
-📚 What are we going to learn? </br>
+### 📚 What are we going to learn? </br>
 In this workshop, you will be able to deploy a [web application](example.com) on AWS and keep it highly available. Don't worry, we will guide you along the way!
 - Use **Application Load Balancer (ALB)** for distributing traffic
 - Provision **Two EC2 instances** running the same backend application
 - Setup **Amazon RDS** as the database backend
 - Utilize **Security Group and IAM roles** to keep everything secure and safe.
 
-❓Basically, how does the project work as a whole?
+### ❓ Basically, how does the project work as a whole?
 1. A user visits the app from their web browser.
 2. The **Application Load Balancer (ALB)** will decide where the traffic will go (in which EC2 instance).
 3. The **Elastic Compute Cloud (EC2) instances** you setup will process the request.
