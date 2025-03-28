@@ -25,7 +25,14 @@ In this workshop, you will be able to deploy a [web application](https://github.
 
 ## Prerequisites
 ### 💻 Environment Setup
-To access the AWS console, use the credentials provided to you and follow the steps below:
+To access the AWS console, use the credentials provided to you and follow the steps below:<br />
+1. Access the AWS Console using the provided link (or if unavailable, [click here](https://console.aws.amazon.com/console/)). Use the login credentials (Account ID/alias, username, password) provided and click the <strong>"Sign In"</strong> button.
+<img width="1454" alt="Screenshot 2025-03-28 at 4 51 44 PM" src="https://github.com/user-attachments/assets/d7d1c782-98a1-42ff-b548-5deb84d9255c" /><br />
+
+2. Make sure to provision resources in the Asia Pacific (Sydney) or ap-southeast-2 only.
+<img width="1455" alt="Screenshot 2025-03-28 at 5 01 55 PM" src="https://github.com/user-attachments/assets/30806eee-2ff2-4471-a6b1-1ed1ed8b2431" /><br />
+
+> Soft reminder: <strong>Please be mindful of your costs. 💰</strong> Rest assured that you have just the sufficient access to services. But, make sure to turn off unused resources and clean up if you are exploring. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
