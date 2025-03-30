@@ -130,40 +130,52 @@ Confirm password = "ustworkshop"
 #### C. Set Up Application Load Balancer (ALB)
 
 1. Back in the EC2 console, click Load Balancers in the left-hand menu.
+![1](https://github.com/user-attachments/assets/f2e8fbf9-6e83-43ec-b2f7-81316ca67499)
 
 2. Click Create Load Balancer.
+![2](https://github.com/user-attachments/assets/bb21b006-cf52-4af3-bc27-58249b31b65d)
 
 3. From the Application Load Balancer card, click Create.
+![3](https://github.com/user-attachments/assets/69175485-f02f-4956-9546-77ac8a483fa7)
 
 4. For Load balancer name, enter Workshop-ALB.
+![4](https://github.com/user-attachments/assets/0528c1fb-6cc5-4dde-9d39-77f3a7f1d9ed)
 
 5. Under Network mapping, click the VPC dropdown, and select the listed Workshop-VPC.
+![5](https://github.com/user-attachments/assets/ffb6756c-04f3-476e-936b-838eae585cac)
 
 6. When the Availability Zones list pops up, select each one (us-east-1a, us-east-1b, and us-east-1c).
+![6](https://github.com/user-attachments/assets/692769a8-5721-4cf6-8f39-445bb54c8e5a)
 
 7. Under Security groups, deselect the default security group listed, and select the one from the dropdown with ctp-ALBSecurityGroup in its name.
+![7](https://github.com/user-attachments/assets/c8ded176-8c0e-437a-87a8-87da1415e43b)
 
 8. Under Listeners and routing, ensure that the Protocol is set to HTTP and the Port is 80. Then, under Default action, click Create target group This will open a new tab. Keep this first tab open to complete later.
+![8](https://github.com/user-attachments/assets/1356c033-de81-4177-9fe4-755c0a58acf5)
 
-9. For Target group name, enter TargetGroup.
+9. For Target group name, enter Workshop-TG.
+![image](https://github.com/user-attachments/assets/8cf3b3e8-fe17-43de-9a08-0bdd11a5bb8b)
 
-10. Click Next. Under Available instances, select both targets that are listed.
+10. Select the VPC.
+![image](https://github.com/user-attachments/assets/b7b4413a-0c73-4d94-9100-a8858a18d537)
 
-11. Click Include as pending below.
+11. Under the health check path, type "/up".
+![image](https://github.com/user-attachments/assets/26d10b10-796f-4843-a237-7c04e39c315b)
 
-12. Click Create target group.
+12. Click Next. Under Available instances, select both targets that are listed. Then click Include as pending below.
+![image](https://github.com/user-attachments/assets/2cb059c4-15cf-4d6a-8e01-07539736b169)
 
-13. Back in the first tab, under Default action, click the refresh button (looks like a circular arrow), and in the dropdown, select the TargetGroup you just created.
+13. Click Create target group.
+![image](https://github.com/user-attachments/assets/8e8893c6-aa56-4f3a-bd2b-677f8a06d33c)
 
-14. Click Create load balancer.
+14. Back in the first tab, under Default action, click the refresh button (looks like a circular arrow), and in the dropdown, select the TargetGroup you just created.
+![image](https://github.com/user-attachments/assets/013d8aa5-f7b4-4cfa-8099-d3e668510d69)
 
-15. On the next screen, click View load balancer.
+15. Click Create load balancer. Wait a few minutes for the load balancer to finish provisioning and enter an active state.
+![image](https://github.com/user-attachments/assets/fc7ce96f-f097-4729-848a-3fb96751cb5d)
 
-16. Wait a few minutes for the load balancer to finish provisioning and enter an active state.
-
-17. Copy its DNS name, and paste it into a new browser tab. You should see the load balancer demo page again. The local IP lets you know which instance you were sent (or "load balanced") to.
-
-18. Refresh the page a few times. You should see the other instance's local IP listed, meaning it's successfully load balancing between the two EC2 instances.
+16. Copy its DNS name, and paste it into a new browser tab. You should see the application now.
+![image](https://github.com/user-attachments/assets/f8e0e5e7-5670-4761-9093-15e801e390ed)
 
 Sample description
 
