@@ -26,7 +26,7 @@ In this workshop, you will be able to deploy a [web application](https://github.
 
 ## Architecture Diagram
 
-![Architecture](images/aws-architecture.png)
+![CRUD App Architecture (UST) drawio](https://github.com/user-attachments/assets/e302bb14-12dd-4e11-a0f7-564681f7883b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
