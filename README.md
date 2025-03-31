@@ -215,6 +215,11 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 7. Refresh the tab where you navigated to the load balancer's public IP. This time, no matter how many times you refresh, it will stay on the same instance (noted by the local IP).✅
 
 ### Step 5 - Start accessing your app!
+1. Copy the DNS link of the <strong>Application Load Balancer</strong> you created.
+   <img width="1458" alt="Screenshot 2025-03-31 at 1 37 26 PM" src="https://github.com/user-attachments/assets/6cc15868-74c9-4bf1-90cf-88b56bcdcc3d" /><br />
+
+2. Paste the DNS link on another browser tab and explore!
+   <img width="1458" alt="Screenshot 2025-03-31 at 1 30 09 PM" src="https://github.com/user-attachments/assets/633ca28f-0cf9-4a21-b6a0-94763080bc9d" /><br />
 
 Congratulations! You've successfully deployed a web application using AWS. Along the way, you worked with these key services:
 
