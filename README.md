@@ -107,10 +107,10 @@ Confirm password = "ustworkshop"
    <img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
 
 3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI.
-   <img width="1458" alt="Screenshot 2025-03-28 at 5 41 19 PM" src="https://github.com/user-attachments/assets/d8480d08-6a44-4a5a-91d3-3955b470206f" /><br />
+   <img width="1456" alt="Screenshot 2025-03-31 at 10 14 58 AM" src="https://github.com/user-attachments/assets/f9072d8e-9f75-47ce-9a5d-5ccdf1916f74" /><br />
 
 4. Select <strong>"Proceed without a key pair"</strong> on the Key Pair (login) section. Make sure that <strong>"t2.micro"</strong> is selected on the instance type.
-   <img width="1456" alt="Screenshot 2025-03-28 at 5 47 06 PM" src="https://github.com/user-attachments/assets/8d931582-4b29-4eae-91b9-dc142c9311bd" /><br />
+   <img width="1456" alt="Screenshot 2025-03-31 at 10 15 10 AM" src="https://github.com/user-attachments/assets/0d1bbad8-0ac5-4922-ae5a-3ddf1f468277" /><br />
 
 5. Scroll down to the Network Settings section, select the <strong>Edit</strong> button on its top right side.
    <img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /><br />
