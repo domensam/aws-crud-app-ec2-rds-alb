@@ -71,19 +71,22 @@ To access the AWS console, use the credentials provided to you and follow the st
 6. Select <strong>"Self managed"</strong> on the Credentials Management section. Then, input the following on the specified text fields:
 
 ```sh
-DB Instance Identifier = "fil"
+DB Instance Identifier = "ctp"
 Master username = "root"
 Master password = "ustworkshop"
 Confirm password = "ustworkshop"
 ```
 
-<img width="1456" alt="Screenshot 2025-03-28 at 3 51 59 PM" src="https://github.com/user-attachments/assets/0e442df0-daba-4249-ac8c-1cb982ff4d47" /><br />
+<img width="1456" alt="Screenshot 2025-03-28 at 3 51 59 PM" src="https://github.com/user-attachments/assets/27c523aa-9e9a-46dc-ad5c-62b818da721c" /><br />
 
-7. Then, navigate to the <strong>"VPC Security Group (Firewall)"</strong> under the Connectivity section, and select the <strong>provided VPC</strong> on the drop down options.
-   <img width="1451" alt="Screenshot 2025-03-28 at 4 23 33 PM" src="https://github.com/user-attachments/assets/9e15663e-1d01-4a0a-a8f2-aa485d926585" /><br />
+7. Then, navigate to the <strong>"VPC Security Group (Firewall)"</strong> under the Connectivity section, then select the <strong>Workshop VPC</strong> on the VPC drop down options, and select <strong>workshop-dbsubnetgroup</strong> on the DB Subnet Group drop down options.
+<img width="1456" alt="Screenshot 2025-03-31 at 10 01 53 AM" src="https://github.com/user-attachments/assets/8ffae2a7-2a0f-4e70-b9dd-8d388eebc748" /><br />
 
-8. Click the <strong>"Create Database"</strong> button on the bottom-most right side.
-   <img width="1452" alt="Screenshot 2025-03-28 at 4 33 03 PM" src="https://github.com/user-attachments/assets/55fd0e37-6881-4f94-afde-0d8c1594ebdf" /><br />
+8. Scroll down to the security group drop down, and select the option containing <strong>DBSecurityGroup</strong>.
+<img width="1456" alt="Screenshot 2025-03-31 at 10 02 10 AM" src="https://github.com/user-attachments/assets/7bac359a-d61e-44d7-a3cb-af15071d237f" /><br />
+
+9. Click the <strong>"Create Database"</strong> button on the bottom-most right side.
+<img width="1452" alt="Screenshot 2025-03-28 at 4 33 03 PM" src="https://github.com/user-attachments/assets/55fd0e37-6881-4f94-afde-0d8c1594ebdf" /><br />
 
 > Note: Before proceeding, wait for the <strong>green banner</strong> on the top to show that the RDS is succesfully created.<br />
 > This takes <strong>around 3-5 minutes</strong>, so grab a cup of coffee while waiting! ☕️ <br />
