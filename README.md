@@ -138,6 +138,9 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 
 #### Step 2.2 - Create 2nd EC2 Instance
 
+1. Follow the steps in creating the first instance <strong>except No. 6</strong>. Select the subnet option <strong>Workshop-AppPrivateSubnet2</strong>
+<img width="1458" alt="Screenshot 2025-03-31 at 1 41 39 PM" src="https://github.com/user-attachments/assets/8cde9c4d-65d6-401d-bc36-d5d2196b0e9f" />
+
 > Note: Make sure to get <strong>running</strong> on the instance state, and <strong>2/2 status checks</strong> passed to indicate a successful provisioning of the instances ✅<br />
 >
 > <img width="1456" alt="Screenshot 2025-03-31 at 11 10 39 AM" src="https://github.com/user-attachments/assets/04b7dcc5-781b-4452-bb19-991a40d0f605" /><br />
