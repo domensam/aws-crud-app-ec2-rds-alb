@@ -51,9 +51,7 @@ To access the AWS console, use the credentials provided to you and follow the st
 
 ## Deployment Steps
 
-### Step 1 - Set Up AWS Resources
-
-#### A. Create RDS Database
+### Step 1 - Create RDS Database
 
 1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
    <img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
@@ -94,15 +92,16 @@ Confirm password = "ustworkshop"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### B. Create EC2 Instances
+### Step 2 - Create EC2 Instances
 
+#### Step 2.1 - Create 1st EC2 Instance
 1. On the console search bar, enter "ec2" and <strong>select the "EC2"</strong> on the resulting options.
    <img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
 
 2. Select the <strong>"Launch Instance" button</strong> on the righthand side of the page.
    <img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
 
-3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI, and declare <strong>2 instances</strong> on the summary tab.
+3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI.
    <img width="1458" alt="Screenshot 2025-03-28 at 5 41 19 PM" src="https://github.com/user-attachments/assets/d8480d08-6a44-4a5a-91d3-3955b470206f" /><br />
 
 4. Select <strong>"Proceed without a key pair"</strong> on the Key Pair (login) section. Make sure that <strong>"t2.micro"</strong> is selected on the instance type.
@@ -126,11 +125,13 @@ Confirm password = "ustworkshop"
 10. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
     <img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
 
+#### Step 2.2 - Create 2nd EC2 Instance
+
 > Note: Make sure to get a <strong>green banner</strong> like this, initiating a successful creation of 2 instances! ✅<br />
 >
 > <img width="1456" alt="Screenshot 2025-03-28 at 6 17 42 PM" src="https://github.com/user-attachments/assets/1f9f7209-6014-43ce-8d94-7b2bca2c9d36" />
 
-#### C. Set Up Application Load Balancer (ALB)
+### Step 3 - Set Up Application Load Balancer (ALB)
 
 1. Back in the EC2 console, click Load Balancers in the left-hand menu.
 ![1](https://github.com/user-attachments/assets/f2e8fbf9-6e83-43ec-b2f7-81316ca67499)
@@ -180,9 +181,7 @@ Confirm password = "ustworkshop"
 16. Copy its DNS name, and paste it into a new browser tab. You should see the application now.
 ![image](https://github.com/user-attachments/assets/f8e0e5e7-5670-4761-9093-15e801e390ed)
 
-Sample description
-
-##### Enable Sticky Sessions
+### Step 4 - Enable Target Group's Sticky Sessions
 
 1. Back on the EC2 > Load Balancers page, select the Listeners tab.
 2. Click the TargetGroup link in the Default action column, which opens the target group.
@@ -194,42 +193,15 @@ Sample description
 8. Click Save changes.
 9. Refresh the tab where you navigated to the load balancer's public IP. This time, no matter how many times you refresh, it will stay on the same instance (noted by the local IP).
 
-### 2. Deploy Application to EC2
+### Step 5 - Start accessing your app!
 
-#### 1. Connect to your instances using "EC2 instance connect"
+Congratulations! You've successfully deployed a web application using AWS. Along the way, you worked with these key services:
 
-#### 2. Install dependencies</h4>
+✅ EC2 – For hosting your application
+✅ RDS – For managing your database
+✅ ALB – For handling traffic efficiently
 
-```sh
-sudo yum update -y
-sudo yum install ...
-```
-
-#### 3. Clone the repository
-
-```sh
-git clone https://github.com/your-repo/aws-crud-app.git
-cd aws-crud-app
-```
-
-#### 4. Set environment variables
-
-```sh
-export DB_HOST="your-rds-endpoint"
-export DB_USER="your-db-username"
-export DB_PASSWORD="your-db-password"
-```
-
-#### 5. Run the application
-
-### 3. Test the Setup
-
-- Open **ALB DNS URL** in a browser.
-- Use **Postman or cURL** to test CRUD operations:
-
-```sh
-curl -X POST http://your-alb-dns/items -H "Content-Type: application/json" -d '{"name": "Sample Item"}'
-```
+Great job! Keep exploring and experimenting with AWS to deepen your skills. 🚀
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,11 +222,10 @@ curl -X POST http://your-alb-dns/items -H "Content-Type: application/json" -d '{
   ```
   to test connectivity.
 
-### 3. Application Not Starting
-
-- Check logs: `journalctl -u your-app --no-pager -n 50`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Wrap up and clean resources
+
 
 ## License
 
