@@ -226,28 +226,6 @@ Great job! Keep exploring and experimenting with AWS to deepen your skills. 🚀
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Troubleshooting & Common Issues
-
-### 1. ALB Not Routing Traffic
-
-- Ensure EC2 **Security Group allows ALB inbound traffic** on port **5000**.
-- Verify **Target Group health checks** are passing.
-
-### 2. RDS Connection Errors
-
-- Ensure RDS **Public Access** is enabled (for testing).
-- Check **Security Group** allows **EC2 IP access on port 3306/5432**.
-- Use:
-  ```sh
-  telnet your-rds-endpoint 3306
-  ```
-  to test connectivity.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## Wrap up and clean resources
-
-
 ## License
 
 Distributed under MIT License. See `LICENSE.txt` for details.
