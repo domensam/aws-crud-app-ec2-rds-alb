@@ -132,6 +132,8 @@ Confirm password = "ustworkshop"
    ```sh
    sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
    ```
+<img width="1456" alt="Screenshot 2025-03-31 at 10 56 17 AM" src="https://github.com/user-attachments/assets/e0ee1934-2957-4ca9-be8d-07b1b1dea2eb" /><br />
+
 11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
     <img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
 
