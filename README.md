@@ -1,4 +1,3 @@
-<img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/7b17ac2c-bf30-4aa0-9932-08fd0fab1f1f" /><p align="center"><img width="200" alt="Leads" src="https://github.com/user-attachments/assets/95ebd1a9-59d6-427a-9948-8217db510d31"/></p>
 <p align="center"><img width="200" alt="CTP" src="https://github.com/user-attachments/assets/96189c71-72ed-4729-a9b2-972489b2344d"/></p>
 
 # ⚒️ Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
