@@ -39,10 +39,10 @@ In this workshop, you will be able to deploy a [web application](https://github.
 To access the AWS console, use the credentials provided to you and follow the steps below:<br />
 
 1. Access the AWS Console using the provided link (or if unavailable, [click here](https://console.aws.amazon.com/console/)). Use the login credentials (Account ID/alias, username, password) provided and click the <strong>"Sign In"</strong> button.
-   <img width="1454" alt="Screenshot 2025-03-28 at 4 51 44 PM" src="https://github.com/user-attachments/assets/d7d1c782-98a1-42ff-b548-5deb84d9255c" /><br />
+<img width="1454" alt="Screenshot 2025-03-28 at 4 51 44 PM" src="https://github.com/user-attachments/assets/d7d1c782-98a1-42ff-b548-5deb84d9255c" /><br />
 
 2. Make sure to provision resources in the Asia Pacific (Sydney) or ap-southeast-2 only.
-   <img width="1455" alt="Screenshot 2025-03-28 at 5 01 55 PM" src="https://github.com/user-attachments/assets/30806eee-2ff2-4471-a6b1-1ed1ed8b2431" /><br />
+<img width="1455" alt="Screenshot 2025-03-28 at 5 01 55 PM" src="https://github.com/user-attachments/assets/30806eee-2ff2-4471-a6b1-1ed1ed8b2431" /><br />
 
 > Soft reminder: <strong>Please be mindful of your costs. 💰</strong> Rest assured that you have just the sufficient access to services. But, make sure to turn off unused resources and clean up if you are exploring.
 
@@ -53,19 +53,19 @@ To access the AWS console, use the credentials provided to you and follow the st
 ### Step 1 - Create RDS Database
 
 1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
-   <img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
+<img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
 
 2. Select the option <strong>"Databases"</strong> on the lefthand side of the page.
-   <img width="1446" alt="Screenshot 2025-03-28 at 3 01 03 PM" src="https://github.com/user-attachments/assets/0b36e6c4-54c1-4744-8f6a-9d37ec0e75da" /><br />
+<img width="1446" alt="Screenshot 2025-03-28 at 3 01 03 PM" src="https://github.com/user-attachments/assets/0b36e6c4-54c1-4744-8f6a-9d37ec0e75da" /><br />
 
 3. Select the <strong>"Create Database"</strong> button on the righthand side of the page.
-   <img width="1468" alt="Screenshot 2025-03-28 at 3 07 20 PM" src="https://github.com/user-attachments/assets/21ab028c-0126-445a-ad0a-042a61a88955" /><br />
+<img width="1468" alt="Screenshot 2025-03-28 at 3 07 20 PM" src="https://github.com/user-attachments/assets/21ab028c-0126-445a-ad0a-042a61a88955" /><br />
 
 4. Select <strong>"PostgreSQL"</strong> for the Engine Type and leave "Standard Create" for the Creation Method
-   <img width="1453" alt="Screenshot 2025-03-28 at 3 36 19 PM" src="https://github.com/user-attachments/assets/35319eab-6b51-433b-b11f-f3a66e9908bc" /><br />
+<img width="1453" alt="Screenshot 2025-03-28 at 3 36 19 PM" src="https://github.com/user-attachments/assets/35319eab-6b51-433b-b11f-f3a66e9908bc" /><br />
 
 5. Select <strong>"Free Tier"</strong> option in the "Templates" section.
-   <img width="1453" alt="Screenshot 2025-03-28 at 3 40 43 PM" src="https://github.com/user-attachments/assets/d9736850-b545-421c-8be5-ff815db46dc4" /><br />
+<img width="1453" alt="Screenshot 2025-03-28 at 3 40 43 PM" src="https://github.com/user-attachments/assets/d9736850-b545-421c-8be5-ff815db46dc4" /><br />
 
 6. Select <strong>"Self managed"</strong> on the Credentials Management section. Then, input the following on the specified text fields:
 
@@ -101,41 +101,40 @@ Confirm password = "ustworkshop"
 
 #### Step 2.1 - Create 1st EC2 Instance
 1. On the console search bar, enter "ec2" and <strong>select the "EC2"</strong> on the resulting options.
-   <img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
+<img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
 
 2. Select the <strong>"Launch Instance" button</strong> on the righthand side of the page.
-   <img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
+<img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
 
 3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI.
-   <img width="1456" alt="Screenshot 2025-03-31 at 10 14 58 AM" src="https://github.com/user-attachments/assets/f9072d8e-9f75-47ce-9a5d-5ccdf1916f74" /><br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 14 58 AM" src="https://github.com/user-attachments/assets/f9072d8e-9f75-47ce-9a5d-5ccdf1916f74" /><br />
 
 4. Select <strong>"Proceed without a key pair"</strong> on the Key Pair (login) section. Make sure that <strong>"t2.micro"</strong> is selected on the instance type.
-   <img width="1456" alt="Screenshot 2025-03-31 at 10 15 10 AM" src="https://github.com/user-attachments/assets/0d1bbad8-0ac5-4922-ae5a-3ddf1f468277" /><br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 15 10 AM" src="https://github.com/user-attachments/assets/0d1bbad8-0ac5-4922-ae5a-3ddf1f468277" /><br />
 
 5. Scroll down to the Network Settings section, select the <strong>Edit</strong> button on its top right side.
-   <img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /><br />
+<img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /><br />
 
 6. In the VPC and subnets dropdowns, select the <strong>Workshop VPC</strong> on the VPC Dropdown, and <strong>Workshop-AppPrivateSubnet1</strong> on the subnet dropdown.
-  <img width="1456" alt="Screenshot 2025-03-31 at 10 25 10 AM" src="https://github.com/user-attachments/assets/b714fc12-a0eb-4151-9f7d-b35502fa1130" />
- <br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 25 10 AM" src="https://github.com/user-attachments/assets/b714fc12-a0eb-4151-9f7d-b35502fa1130" /><br />
 
 7. Enable the <strong> Select Existing Security Group</strong> option, select the subnet group containing <strong>AppSecurityGroup</strong>.
-   <img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /><br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /><br />
 
 8. Scroll down to the bottom, and click the <strong>"Advanced Details"</strong> dropdown.
-   <img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/e6c7c67a-a0a9-4a59-8ca5-a4b64ea2c309" /><br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/e6c7c67a-a0a9-4a59-8ca5-a4b64ea2c309" /><br />
 
 9. Scroll down to the bottom, and paste [this](https://github.com/jcmsj/ust-workshop/blob/main/sudoaws.sh) in the user data text box.
-   <img width="1456" alt="Screenshot 2025-03-31 at 10 34 29 AM" src="https://github.com/user-attachments/assets/26b40f50-b67f-4144-a804-1316bc00f64c" /><br />
+<img width="1456" alt="Screenshot 2025-03-31 at 10 34 29 AM" src="https://github.com/user-attachments/assets/26b40f50-b67f-4144-a804-1316bc00f64c" /><br />
 
-10. Replace the "$DB_HOST" with the RDS Endpoint from the
-   ```sh
-   sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
-   ```
+10. Replace the "$DB_HOST" with the RDS Endpoint using the RDS Endpoint you copied from Step 1
+```sh
+sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
+```
 <img width="1456" alt="Screenshot 2025-03-31 at 10 56 17 AM" src="https://github.com/user-attachments/assets/e0ee1934-2957-4ca9-be8d-07b1b1dea2eb" /><br />
 
 11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
-    <img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
+<img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
 
 #### Step 2.2 - Create 2nd EC2 Instance
 
