@@ -111,13 +111,14 @@ Confirm password = "ustworkshop"
    <img width="1456" alt="Screenshot 2025-03-28 at 5 47 06 PM" src="https://github.com/user-attachments/assets/8d931582-4b29-4eae-91b9-dc142c9311bd" /><br />
 
 5. Scroll down to the Network Settings section, select the <strong>Edit</strong> button on its top right side.
-   <img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/ed5a9786-2800-4771-bd13-811d906e315f" /><br />
+   <img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /><br />
 
-6. In the VPC and subnets dropdowns, select the <strong>specified VPC and specified subnet</strong>.
-   <img width="1456" alt="Screenshot 2025-03-28 at 5 56 33 PM" src="https://github.com/user-attachments/assets/6941469b-71c5-4ab9-ba9d-0a7eaa3d3b65" /><br />
+6. In the VPC and subnets dropdowns, select the <strong>Workshop VPC</strong> on the VPC Dropdown, and <strong>Workshop-AppPrivateSubnet1</strong> on the subnet dropdown.
+  <img width="1456" alt="Screenshot 2025-03-31 at 10 25 10 AM" src="https://github.com/user-attachments/assets/b714fc12-a0eb-4151-9f7d-b35502fa1130" />
+ <br />
 
-7. Choose the <strong>"Select existing security group"</strong> option, and select the <strong>specified security group</strong> in the security groups dropdown.
-   <img width="1456" alt="Screenshot 2025-03-28 at 6 00 44 PM" src="https://github.com/user-attachments/assets/86edba1e-d921-4713-b2ce-32dcabb6f05a" /><br />
+7. Enable the <strong> Select Existing Security Group</strong> option, select the subnet group containing <strong>AppSecurityGroup</strong>.
+   <img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /><br />
 
 8. Scroll down to the bottom, and click the <strong>"Advanced Details"</strong> dropdown.
    <img width="1456" alt="Screenshot 2025-03-28 at 6 07 30 PM" src="https://github.com/user-attachments/assets/2be6868d-52c9-4a4a-a4c8-46b5ec159b6e" /><br />
