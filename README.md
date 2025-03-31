@@ -1,4 +1,4 @@
-<p align="center"><img width="200" alt="Leads" src="https://github.com/user-attachments/assets/95ebd1a9-59d6-427a-9948-8217db510d31"/></p>
+<img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/7b17ac2c-bf30-4aa0-9932-08fd0fab1f1f" /><p align="center"><img width="200" alt="Leads" src="https://github.com/user-attachments/assets/95ebd1a9-59d6-427a-9948-8217db510d31"/></p>
 <p align="center"><img width="200" alt="CTP" src="https://github.com/user-attachments/assets/96189c71-72ed-4729-a9b2-972489b2344d"/></p>
 
 # ⚒️ Hands-on Lab: Deploying CRUD App on AWS using EC2, RDS, and ALB
@@ -91,7 +91,10 @@ Confirm password = "ustworkshop"
 > Note: Before proceeding, wait for the <strong>green banner</strong> on the top to show that the RDS is succesfully created.<br />
 > This takes <strong>around 3-5 minutes</strong>, so grab a cup of coffee while waiting! ☕️ <br />
 >
-> <img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/7ba11fec-3bf4-49ab-a503-d9e9bac707ee" />
+> <img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/7ba11fec-3bf4-49ab-a503-d9e9bac707ee" /><br />
+
+10. Once done, take note of the "RDS Endpoint", you will use this later :)
+<img width="1456" alt="Screenshot 2025-03-31 at 10 45 30 AM" src="https://github.com/user-attachments/assets/9ec4399f-7f3c-4e0c-83ca-05eb321423e7" /><br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -121,12 +124,16 @@ Confirm password = "ustworkshop"
    <img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /><br />
 
 8. Scroll down to the bottom, and click the <strong>"Advanced Details"</strong> dropdown.
-   <img width="1456" alt="Screenshot 2025-03-28 at 6 07 30 PM" src="https://github.com/user-attachments/assets/2be6868d-52c9-4a4a-a4c8-46b5ec159b6e" /><br />
+   <img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/e6c7c67a-a0a9-4a59-8ca5-a4b64ea2c309" /><br />
 
-9. Scroll down (i know, again) to the bottom, and paste [this](https://github.com/jcmsj/ust-workshop/blob/main/sudoaws.sh) in the user data text box.
-   <img width="1456" alt="Screenshot 2025-03-28 at 6 10 05 PM" src="https://github.com/user-attachments/assets/68339b03-55ab-4550-8908-8a417ea97d43" /><br />
+9. Scroll down to the bottom, and paste [this](https://github.com/jcmsj/ust-workshop/blob/main/sudoaws.sh) in the user data text box.
+   <img width="1456" alt="Screenshot 2025-03-31 at 10 34 29 AM" src="https://github.com/user-attachments/assets/26b40f50-b67f-4144-a804-1316bc00f64c" /><br />
 
-10. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
+10. Replace the "$DB_HOST" with the RDS Endpoint from the
+   ```sh
+   sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
+   ```
+11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
     <img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
 
 #### Step 2.2 - Create 2nd EC2 Instance
