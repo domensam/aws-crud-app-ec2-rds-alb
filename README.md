@@ -52,6 +52,24 @@ To access the AWS console, use the credentials provided to you and follow the st
 
 ### Step 1 - Provision VPC using Cloudformation Template
 
+1. On the console's search bar, type <strong>"CloudFormation"</strong> and select this service on the dropdown options that will appear.
+<img width="1458" alt="Screenshot 2025-03-31 at 2 01 29 PM" src="https://github.com/user-attachments/assets/2dbeb5df-0de8-4a9d-9914-a10860b7a9d4" /><br />
+
+2. Click the Create Stack button on the upper right side, and select <strong>With new resources (standard)</strong>.
+<img width="1458" alt="Screenshot 2025-03-31 at 2 02 15 PM" src="https://github.com/user-attachments/assets/ec0fd001-371d-40c5-90a1-0573db7f4226" /><br />
+
+3. Scroll down to the Specify Template section, and select <strong>Upload a template file</strong>. Download [this file (CloudFormation Template)](https://github.com/jcmsj/ust-workshop/blob/main/cfn-ustvpc.yml) and upload it on the specified portion.
+<img width="1458" alt="Screenshot 2025-03-31 at 2 02 48 PM" src="https://github.com/user-attachments/assets/3966c9e0-7213-40b9-a402-ef2431e56c03" /><br />
+
+4. On the second page, specify a stack name then click Next on the bottom right of the page.
+<img width="1458" alt="Screenshot 2025-03-31 at 2 08 20 PM" src="https://github.com/user-attachments/assets/fd33a316-7652-4e81-9e9e-a305ae7e3a9f" /><br />
+
+5. Just click "Next" on the succeeding pages until you arrive at the "Submit" button to create the stack.
+<img width="1458" alt="Screenshot 2025-03-31 at 2 12 05 PM" src="https://github.com/user-attachments/assets/bf49abf0-9418-49c7-aef3-4776bf0ac49d" /><br />
+
+> Note: You can do the succeeding steps, it will take 3-5 minutes before the stack shows <strong>"CREATE_COMPLETE"</strong> status.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Step 2 - Create RDS Database
 
 1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
