@@ -218,9 +218,9 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 
 Congratulations! You've successfully deployed a web application using AWS. Along the way, you worked with these key services:
 
-✅ EC2 – For hosting your application
-✅ RDS – For managing your database
-✅ ALB – For handling traffic efficiently
+✅ EC2 – For hosting your application<br />
+✅ RDS – For managing your database<br />
+✅ ALB – For handling traffic efficiently<br />
 
 Great job! Keep exploring and experimenting with AWS to deepen your skills. 🚀
 
