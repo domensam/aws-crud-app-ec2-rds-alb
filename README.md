@@ -186,15 +186,25 @@ Confirm password = "ustworkshop"
 
 ### Step 4 - Enable Target Group's Sticky Sessions
 
-1. Back on the EC2 > Load Balancers page, select the Listeners tab.
-2. Click the TargetGroup link in the Default action column, which opens the target group.
-3. Select the Attributes tab.
-4. Click Edit.
-5. Check the box next to Stickiness to enable it.
-6. Leave Stickiness type set to Load balancer generated cookie.
-7. Leave Stickiness duration set to 1 days.
-8. Click Save changes.
-9. Refresh the tab where you navigated to the load balancer's public IP. This time, no matter how many times you refresh, it will stay on the same instance (noted by the local IP).
+1. Back on Load Balancers page, find the Listeners tab and click the TargetGroup link in the Default action column
+![image](https://github.com/user-attachments/assets/b81d7fb1-369b-41fa-9b49-748e2eb1afca)
+
+2. Select the Attributes tab.
+![image](https://github.com/user-attachments/assets/4a730c5d-8262-4ae5-a0ae-eea3ef77a82b)
+
+3. Click Edit.
+![image](https://github.com/user-attachments/assets/4143902c-bb4f-4322-9099-0174e743b19a)
+
+4. Check the box next to Stickiness to enable it. Leave Stickiness type set to Load balancer generated cookie.
+![image](https://github.com/user-attachments/assets/51fb7e3a-8c6c-42ef-8548-689b2766fd37)
+
+5. Leave Stickiness duration set to 1 days.
+![image](https://github.com/user-attachments/assets/08a3e374-2bee-4f34-877e-df57714d0a86)
+
+6. Click Save changes
+![image](https://github.com/user-attachments/assets/f3f00bdd-0192-4187-8f19-4b67eb220c75)
+
+7. Refresh the tab where you navigated to the load balancer's public IP. This time, no matter how many times you refresh, it will stay on the same instance (noted by the local IP).✅
 
 ### Step 5 - Start accessing your app!
 
