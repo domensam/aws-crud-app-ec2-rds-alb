@@ -138,9 +138,9 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 
 #### Step 2.2 - Create 2nd EC2 Instance
 
-> Note: Make sure to get a <strong>green banner</strong> like this, initiating a successful creation of 2 instances! ✅<br />
+> Note: Make sure to get <strong>running</strong> on the instance state, and <strong>2/2 status checks</strong> passed to indicate a successful provisioning of the instances ✅<br />
 >
-> <img width="1456" alt="Screenshot 2025-03-28 at 6 17 42 PM" src="https://github.com/user-attachments/assets/1f9f7209-6014-43ce-8d94-7b2bca2c9d36" />
+> <img width="1456" alt="Screenshot 2025-03-31 at 11 10 39 AM" src="https://github.com/user-attachments/assets/04b7dcc5-781b-4452-bb19-991a40d0f605" /><br />
 
 ### Step 3 - Set Up Application Load Balancer (ALB)
 
