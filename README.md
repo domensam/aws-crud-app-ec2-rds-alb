@@ -92,10 +92,10 @@ Confirm password = "ustworkshop"
 > <p>Note: Before proceeding, wait for the <strong>green banner</strong> on the top to show that the RDS is succesfully created.</p>
 > <p>This takes <strong>around 3-5 minutes</strong>, so grab a cup of coffee while waiting! ☕️ </p>
 >
-> <p><img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/7ba11fec-3bf4-49ab-a503-d9e9bac707ee" /></p>
+> <p><img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/bb48c21f-44df-4480-a731-fc5e8f96fe26" /></p>
 
 11. Once done, take note of the "RDS Endpoint", you will use this later :)
-<p><img width="1456" alt="Screenshot 2025-03-31 at 10 45 30 AM" src="https://github.com/user-attachments/assets/9ec4399f-7f3c-4e0c-83ca-05eb321423e7" /></p>
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 45 30 AM" src="https://github.com/user-attachments/assets/0c4de2c2-b874-4b9e-940d-5a4f24e60b25" /></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
