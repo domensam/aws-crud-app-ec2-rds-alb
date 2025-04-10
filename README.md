@@ -12,7 +12,7 @@ We are familiar with the demand on modern web application, even if its incoming/
 
 ### 📚 What are we going to learn? </br>
 
-In this workshop, you will be able to deploy a [web application](https://github.com/jcmsj/ust-workshop.git) on AWS and keep it highly available. Don't worry, we will guide you along the way!
+In this workshop, you will be able to deploy a <a href="https://github.com/jcmsj/ust-workshop.git" target="_blank" rel="noopener noreferrer">web application</a> on AWS and keep it highly available. Don't worry, we will guide you along the way!
 
 - Use **Application Load Balancer (ALB)** for distributing traffic
 - Provision **Two EC2 instances** running the same backend application
