@@ -10,9 +10,9 @@
 
 We are familiar with the demand on modern web application, even if its incoming/outgoing traffic **increase or decrease dramatically**, our application should **stay online without crashing**. To achieve this, we can **spread the workload across multiple servers** and use AWS managed services to keep things running smoothly.
 
-### 📚 What are we going to learn? </br>
+### 📚 What are we going to learn?
 
-In this workshop, you will be able to deploy a <a href="https://github.com/jcmsj/ust-workshop.git" target="_blank" rel="noopener noreferrer">web application</a> on AWS and keep it highly available. Don't worry, we will guide you along the way!
+In this workshop, you will be able to deploy a [web application](https://github.com/jcmsj/ust-workshop.git) on AWS and keep it highly available. Don't worry, we will guide you along the way!
 
 - Use **Application Load Balancer (ALB)** for distributing traffic
 - Provision **Two EC2 instances** running the same backend application
@@ -35,13 +35,13 @@ In this workshop, you will be able to deploy a <a href="https://github.com/jcmsj
 
 ### 💻 Environment Setup
 
-To access the AWS console, use the credentials provided to you and follow the steps below:<br />
+<p>To access the AWS console, use the credentials provided to you and follow the steps below:</p>
 
 1. Access the AWS Console using the provided link (or if unavailable, [click here](https://console.aws.amazon.com/console/)). Use the login credentials (Account ID/alias, username, password) provided and click the <strong>"Sign In"</strong> button.
-<img width="1454" alt="Screenshot 2025-03-28 at 4 51 44 PM" src="https://github.com/user-attachments/assets/d7d1c782-98a1-42ff-b548-5deb84d9255c" /><br />
+<p><img width="1454" alt="Screenshot 2025-03-28 at 4 51 44 PM" src="https://github.com/user-attachments/assets/d7d1c782-98a1-42ff-b548-5deb84d9255c" /></p>
 
 2. Make sure to provision resources in the Asia Pacific (Singapore) or ap-southeast-1 only.
-<img width="1454" alt="Screenshot 2025-04-10 at 9 24 45 PM" src="https://github.com/user-attachments/assets/70536b64-634b-481e-855d-145af31413a7" /><br />
+<p><img width="1454" alt="Screenshot 2025-04-10 at 9 24 45 PM" src="https://github.com/user-attachments/assets/70536b64-634b-481e-855d-145af31413a7" /></p>
 
 > Soft reminder: <strong>Please be mindful of your costs. 💰</strong> Rest assured that you have just the sufficient access to services. But, make sure to turn off unused resources and clean up if you are exploring.
 
@@ -51,20 +51,20 @@ To access the AWS console, use the credentials provided to you and follow the st
 
 ### Step 1 - Create RDS Database
 
-1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
-<img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
+1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Aurora and RDS"</strong> on the resulting options.
+<p><img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /></p>
 
 2. Select the option <strong>"Databases"</strong> on the lefthand side of the page.
-<img width="1446" alt="Screenshot 2025-03-28 at 3 01 03 PM" src="https://github.com/user-attachments/assets/0b36e6c4-54c1-4744-8f6a-9d37ec0e75da" /><br />
+<p><img width="1446" alt="Screenshot 2025-03-28 at 3 01 03 PM" src="https://github.com/user-attachments/assets/0b36e6c4-54c1-4744-8f6a-9d37ec0e75da" /></p>
 
 3. Select the <strong>"Create Database"</strong> button on the righthand side of the page.
-<img width="1468" alt="Screenshot 2025-03-28 at 3 07 20 PM" src="https://github.com/user-attachments/assets/21ab028c-0126-445a-ad0a-042a61a88955" /><br />
+<p><img width="1468" alt="Screenshot 2025-03-28 at 3 07 20 PM" src="https://github.com/user-attachments/assets/21ab028c-0126-445a-ad0a-042a61a88955" /></p>
 
 4. Select <strong>"PostgreSQL"</strong> for the Engine Type and leave "Standard Create" for the Creation Method
-<img width="1453" alt="Screenshot 2025-03-28 at 3 36 19 PM" src="https://github.com/user-attachments/assets/35319eab-6b51-433b-b11f-f3a66e9908bc" /><br />
+<p><img width="1453" alt="Screenshot 2025-03-28 at 3 36 19 PM" src="https://github.com/user-attachments/assets/35319eab-6b51-433b-b11f-f3a66e9908bc" /></p>
 
 5. Select <strong>"Free Tier"</strong> option in the "Templates" section.
-<img width="1453" alt="Screenshot 2025-03-28 at 3 40 43 PM" src="https://github.com/user-attachments/assets/d9736850-b545-421c-8be5-ff815db46dc4" /><br />
+<p><img width="1453" alt="Screenshot 2025-03-28 at 3 40 43 PM" src="https://github.com/user-attachments/assets/d9736850-b545-421c-8be5-ff815db46dc4" /></p>
 
 6. Select <strong>"Self managed"</strong> on the Credentials Management section. Then, input the following on the specified text fields:
 
@@ -75,24 +75,27 @@ Master password = "ustworkshop"
 Confirm password = "ustworkshop"
 ```
 
-<img width="1456" alt="Screenshot 2025-03-28 at 3 51 59 PM" src="https://github.com/user-attachments/assets/27c523aa-9e9a-46dc-ad5c-62b818da721c" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-28 at 3 51 59 PM" src="https://github.com/user-attachments/assets/27c523aa-9e9a-46dc-ad5c-62b818da721c" /></p>
 
-7. Then, navigate to the <strong>"VPC Security Group (Firewall)"</strong> under the Connectivity section, then select the <strong>Workshop VPC</strong> on the VPC drop down options, and select <strong>workshop-dbsubnetgroup</strong> on the DB Subnet Group drop down options.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 01 53 AM" src="https://github.com/user-attachments/assets/8ffae2a7-2a0f-4e70-b9dd-8d388eebc748" /><br />
+7. Make sure that **db.t4g.micro** is selected as the DB Instance Class under the **Instance Configuration** Section. Also, choose **General Purpose (SSD) gp3** as the storage type under the **Storage** Section.
+<p><img width="1454" alt="Screenshot 2025-04-10 at 10 08 48 PM" src="https://github.com/user-attachments/assets/a4c7afac-1fcf-4ee4-a352-a3de927b83e2" /></p>
 
-8. Scroll down to the security group drop down, and select the option containing <strong>DBSecurityGroup</strong>.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 02 10 AM" src="https://github.com/user-attachments/assets/7bac359a-d61e-44d7-a3cb-af15071d237f" /><br />
+8. Then, navigate to the <strong>"VPC Security Group (Firewall)"</strong> under the Connectivity section. Select the <strong>Workshop VPC</strong> on the VPC drop down options, and choose <strong>workshop-dbsubnetgroup</strong> on the DB Subnet Group drop down options.
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 01 53 AM" src="https://github.com/user-attachments/assets/8ffae2a7-2a0f-4e70-b9dd-8d388eebc748" /></p>
 
-9. Click the <strong>"Create Database"</strong> button on the bottom-most right side.
-<img width="1452" alt="Screenshot 2025-03-28 at 4 33 03 PM" src="https://github.com/user-attachments/assets/55fd0e37-6881-4f94-afde-0d8c1594ebdf" /><br />
+9. Scroll down to the security group drop down, and select the option containing <strong>DBSecurityGroup</strong>.
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 02 10 AM" src="https://github.com/user-attachments/assets/7bac359a-d61e-44d7-a3cb-af15071d237f" /></p>
 
-> Note: Before proceeding, wait for the <strong>green banner</strong> on the top to show that the RDS is succesfully created.<br />
-> This takes <strong>around 3-5 minutes</strong>, so grab a cup of coffee while waiting! ☕️ <br />
+10. Click the <strong>"Create Database"</strong> button on the bottom-most right side.
+<p><img width="1452" alt="Screenshot 2025-03-28 at 4 33 03 PM" src="https://github.com/user-attachments/assets/55fd0e37-6881-4f94-afde-0d8c1594ebdf" /></p>
+
+> <p>Note: Before proceeding, wait for the <strong>green banner</strong> on the top to show that the RDS is succesfully created.</p>
+> <p>This takes <strong>around 3-5 minutes</strong>, so grab a cup of coffee while waiting! ☕️ </p>
 >
-> <img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/7ba11fec-3bf4-49ab-a503-d9e9bac707ee" /><br />
+> <p><img width="1156" alt="Screenshot 2025-03-28 at 4 35 40 PM" src="https://github.com/user-attachments/assets/7ba11fec-3bf4-49ab-a503-d9e9bac707ee" /></p>
 
-10. Once done, take note of the "RDS Endpoint", you will use this later :)
-<img width="1456" alt="Screenshot 2025-03-31 at 10 45 30 AM" src="https://github.com/user-attachments/assets/9ec4399f-7f3c-4e0c-83ca-05eb321423e7" /><br />
+11. Once done, take note of the "RDS Endpoint", you will use this later :)
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 45 30 AM" src="https://github.com/user-attachments/assets/9ec4399f-7f3c-4e0c-83ca-05eb321423e7" /></p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -100,49 +103,49 @@ Confirm password = "ustworkshop"
 
 #### Step 2.1 - Create 1st EC2 Instance
 1. On the console search bar, enter "ec2" and <strong>select the "EC2"</strong> on the resulting options.
-<img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
+<p><img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /></p>
 
 2. Select the <strong>"Launch Instance" button</strong> on the righthand side of the page.
-<img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /><br />
+<p><img width="1455" alt="Screenshot 2025-03-28 at 5 35 32 PM" src="https://github.com/user-attachments/assets/7cbad07d-d084-4a71-a0b0-dbc459569ff3" /></p>
 
 3. Specify an instance name of your choice, select <strong>"Ubuntu"</strong> as the AMI.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 14 58 AM" src="https://github.com/user-attachments/assets/f9072d8e-9f75-47ce-9a5d-5ccdf1916f74" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 14 58 AM" src="https://github.com/user-attachments/assets/f9072d8e-9f75-47ce-9a5d-5ccdf1916f74" /></p>
 
 4. Select <strong>"Proceed without a key pair"</strong> on the Key Pair (login) section. Make sure that <strong>"t2.micro"</strong> is selected on the instance type.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 15 10 AM" src="https://github.com/user-attachments/assets/0d1bbad8-0ac5-4922-ae5a-3ddf1f468277" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 15 10 AM" src="https://github.com/user-attachments/assets/0d1bbad8-0ac5-4922-ae5a-3ddf1f468277" /></p>
 
 5. Scroll down to the Network Settings section, select the <strong>Edit</strong> button on its top right side.
-<img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-28 at 5 52 41 PM" src="https://github.com/user-attachments/assets/6f480140-b524-4b0a-9b79-f190fd2a05e2" /></p>
 
 6. In the VPC and subnets dropdowns, select the <strong>Workshop VPC</strong> on the VPC Dropdown, and <strong>Workshop-AppPrivateSubnet1</strong> on the subnet dropdown.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 25 10 AM" src="https://github.com/user-attachments/assets/b714fc12-a0eb-4151-9f7d-b35502fa1130" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 25 10 AM" src="https://github.com/user-attachments/assets/b714fc12-a0eb-4151-9f7d-b35502fa1130" /></p>
 
 7. Enable the <strong> Select Existing Security Group</strong> option, select the subnet group containing <strong>AppSecurityGroup</strong>.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 25 16 AM" src="https://github.com/user-attachments/assets/5df3575f-5d5f-433f-bb94-20bff3d98e86" /></p>
 
 8. Scroll down to the bottom, and click the <strong>"Advanced Details"</strong> dropdown.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/e6c7c67a-a0a9-4a59-8ca5-a4b64ea2c309" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 33 10 AM" src="https://github.com/user-attachments/assets/e6c7c67a-a0a9-4a59-8ca5-a4b64ea2c309" /></p>
 
 9. Scroll down to the bottom, and paste [this](https://github.com/jcmsj/ust-workshop/blob/main/sudoaws.sh) in the user data text box.
-<img width="1456" alt="Screenshot 2025-03-31 at 10 34 29 AM" src="https://github.com/user-attachments/assets/26b40f50-b67f-4144-a804-1316bc00f64c" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 34 29 AM" src="https://github.com/user-attachments/assets/26b40f50-b67f-4144-a804-1316bc00f64c" /></p>
 
 10. Replace the "$DB_HOST" with the RDS Endpoint using the RDS Endpoint you copied from Step 1
 ```sh
 sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 ```
-<img width="1456" alt="Screenshot 2025-03-31 at 10 56 17 AM" src="https://github.com/user-attachments/assets/e0ee1934-2957-4ca9-be8d-07b1b1dea2eb" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-31 at 10 56 17 AM" src="https://github.com/user-attachments/assets/e0ee1934-2957-4ca9-be8d-07b1b1dea2eb" /></p>
 
 11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
-<img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
+<p><img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /></p>
 
 #### Step 2.2 - Create 2nd EC2 Instance
 
 1. Follow the steps in creating the first instance <strong>except No. 6</strong>. Select the subnet option <strong>Workshop-AppPrivateSubnet2</strong>
-<img width="1458" alt="Screenshot 2025-03-31 at 1 41 39 PM" src="https://github.com/user-attachments/assets/8cde9c4d-65d6-401d-bc36-d5d2196b0e9f" />
+<p><img width="1458" alt="Screenshot 2025-03-31 at 1 41 39 PM" src="https://github.com/user-attachments/assets/8cde9c4d-65d6-401d-bc36-d5d2196b0e9f" /></p>
 
-> Note: Make sure to get <strong>running</strong> on the instance state, and <strong>2/2 status checks</strong> passed to indicate a successful provisioning of the instances ✅<br />
+> <p>Note: Make sure to get <strong>running</strong> on the instance state, and <strong>2/2 status checks</strong> passed to indicate a successful provisioning of the instances ✅</p>
 >
-> <img width="1456" alt="Screenshot 2025-03-31 at 11 10 39 AM" src="https://github.com/user-attachments/assets/04b7dcc5-781b-4452-bb19-991a40d0f605" /><br />
+> <img width="1456" alt="Screenshot 2025-03-31 at 11 10 39 AM" src="https://github.com/user-attachments/assets/04b7dcc5-781b-4452-bb19-991a40d0f605" /></p>
 
 ### Step 3 - Set Up Application Load Balancer (ALB)
 
@@ -218,16 +221,16 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 
 ### Step 5 - Start accessing your app!
 1. Copy the DNS link of the <strong>Application Load Balancer</strong> you created in Step 4.
-   <img width="1458" alt="Screenshot 2025-03-31 at 1 37 26 PM" src="https://github.com/user-attachments/assets/6cc15868-74c9-4bf1-90cf-88b56bcdcc3d" /><br />
+   <p><img width="1458" alt="Screenshot 2025-03-31 at 1 37 26 PM" src="https://github.com/user-attachments/assets/6cc15868-74c9-4bf1-90cf-88b56bcdcc3d" /></p>
 
 2. Paste the DNS link on another browser tab and explore!
-   <img width="1458" alt="Screenshot 2025-03-31 at 1 30 09 PM" src="https://github.com/user-attachments/assets/633ca28f-0cf9-4a21-b6a0-94763080bc9d" /><br />
+   <p><img width="1458" alt="Screenshot 2025-03-31 at 1 30 09 PM" src="https://github.com/user-attachments/assets/633ca28f-0cf9-4a21-b6a0-94763080bc9d" /></p>
 
 Congratulations! You've successfully deployed a web application using AWS. Along the way, you worked with these key services:
 
-✅ EC2 – For hosting your application<br />
-✅ RDS – For managing your database<br />
-✅ ALB – For handling traffic efficiently<br />
+<p>✅ EC2 – For hosting your application</p>
+<p>✅ RDS – For managing your database</p>
+<p>✅ ALB – For handling traffic efficiently</p>
 
 Great job! Keep exploring and experimenting with AWS to deepen your skills. 🚀
 
