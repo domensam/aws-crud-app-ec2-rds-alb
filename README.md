@@ -49,27 +49,7 @@ To access the AWS console, use the credentials provided to you and follow the st
 
 ## Deployment Steps
 
-### Step 1 - Provision VPC using Cloudformation Template
-
-1. On the console's search bar, type <strong>"CloudFormation"</strong> and select this service on the dropdown options that will appear.
-<img width="1458" alt="Screenshot 2025-03-31 at 2 01 29 PM" src="https://github.com/user-attachments/assets/2dbeb5df-0de8-4a9d-9914-a10860b7a9d4" /><br />
-
-2. Click the Create Stack button on the upper right side, and select <strong>With new resources (standard)</strong>.
-<img width="1458" alt="Screenshot 2025-03-31 at 2 02 15 PM" src="https://github.com/user-attachments/assets/ec0fd001-371d-40c5-90a1-0573db7f4226" /><br />
-
-3. Scroll down to the Specify Template section, and select <strong>Upload a template file</strong>. Download [this file (CloudFormation Template)](https://github.com/jcmsj/ust-workshop/blob/main/cfn-ustvpc.yml) and upload it on the specified portion.
-<img width="1458" alt="Screenshot 2025-03-31 at 2 02 48 PM" src="https://github.com/user-attachments/assets/3966c9e0-7213-40b9-a402-ef2431e56c03" /><br />
-
-4. On the second page, specify a stack name then click Next on the bottom right of the page.
-<img width="1458" alt="Screenshot 2025-03-31 at 2 08 20 PM" src="https://github.com/user-attachments/assets/fd33a316-7652-4e81-9e9e-a305ae7e3a9f" /><br />
-
-5. Just click "Next" on the succeeding pages until you arrive at the "Submit" button to create the stack.
-<img width="1458" alt="Screenshot 2025-03-31 at 2 12 05 PM" src="https://github.com/user-attachments/assets/bf49abf0-9418-49c7-aef3-4776bf0ac49d" /><br />
-
-> Note: You can do the succeeding steps, it will take 3-5 minutes before the stack shows <strong>"CREATE_COMPLETE"</strong> status.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Step 2 - Create RDS Database
+### Step 1 - Create RDS Database
 
 1. Type <strong>"rds"</strong> on the console's search bar and select <strong>"Amazon and RDS"</strong> on the resulting options.
 <img width="1447" alt="Screenshot 2025-03-28 at 2 52 52 PM" src="https://github.com/user-attachments/assets/9f14c53f-3b94-43f3-8302-b36cfc90e8f1" /><br />
@@ -116,9 +96,9 @@ Confirm password = "ustworkshop"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Step 3 - Create EC2 Instances
+### Step 2 - Create EC2 Instances
 
-#### Step 3.1 - Create 1st EC2 Instance
+#### Step 2.1 - Create 1st EC2 Instance
 1. On the console search bar, enter "ec2" and <strong>select the "EC2"</strong> on the resulting options.
 <img width="1455" alt="Screenshot 2025-03-28 at 5 26 13 PM" src="https://github.com/user-attachments/assets/c5bdf37b-27fa-485a-a05d-108abceb44ec" /><br />
 
@@ -155,7 +135,7 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 11. After pasting the user data script, click the "Launch instance" button on the right bottom righthand side.
 <img width="1456" alt="Screenshot 2025-03-28 at 6 14 36 PM" src="https://github.com/user-attachments/assets/3e45114c-4018-4a80-ad57-c7dceb6277e6" /><br />
 
-#### Step 3.2 - Create 2nd EC2 Instance
+#### Step 2.2 - Create 2nd EC2 Instance
 
 1. Follow the steps in creating the first instance <strong>except No. 6</strong>. Select the subnet option <strong>Workshop-AppPrivateSubnet2</strong>
 <img width="1458" alt="Screenshot 2025-03-31 at 1 41 39 PM" src="https://github.com/user-attachments/assets/8cde9c4d-65d6-401d-bc36-d5d2196b0e9f" />
@@ -164,7 +144,7 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 >
 > <img width="1456" alt="Screenshot 2025-03-31 at 11 10 39 AM" src="https://github.com/user-attachments/assets/04b7dcc5-781b-4452-bb19-991a40d0f605" /><br />
 
-### Step 4 - Set Up Application Load Balancer (ALB)
+### Step 3 - Set Up Application Load Balancer (ALB)
 
 1. Back in the EC2 console, click Load Balancers in the left-hand menu.
 ![1](https://github.com/user-attachments/assets/f2e8fbf9-6e83-43ec-b2f7-81316ca67499)
@@ -214,7 +194,7 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 16. Copy its DNS name, and paste it into a new browser tab. You should see the application now.
 ![image](https://github.com/user-attachments/assets/f8e0e5e7-5670-4761-9093-15e801e390ed)
 
-### Step 5 - Enable Target Group's Sticky Sessions
+### Step 4 - Enable Target Group's Sticky Sessions
 
 1. Back on Load Balancers page, find the Listeners tab and click the TargetGroup link in the Default action column
 ![image](https://github.com/user-attachments/assets/b81d7fb1-369b-41fa-9b49-748e2eb1afca)
@@ -236,7 +216,7 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 
 7. Refresh the tab where you navigated to the load balancer's public IP. This time, no matter how many times you refresh, it will stay on the same instance (noted by the local IP).✅
 
-### Step 6 - Start accessing your app!
+### Step 5 - Start accessing your app!
 1. Copy the DNS link of the <strong>Application Load Balancer</strong> you created in Step 4.
    <img width="1458" alt="Screenshot 2025-03-31 at 1 37 26 PM" src="https://github.com/user-attachments/assets/6cc15868-74c9-4bf1-90cf-88b56bcdcc3d" /><br />
 
