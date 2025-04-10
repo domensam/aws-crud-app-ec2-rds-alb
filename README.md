@@ -226,6 +226,9 @@ sed -i 's/DB_HOST=127.0.0.1/DB_HOST=$DB_HOST/g' .env
 2. Paste the DNS link on another browser tab and explore!
    <p><img width="1458" alt="Screenshot 2025-03-31 at 1 30 09 PM" src="https://github.com/user-attachments/assets/633ca28f-0cf9-4a21-b6a0-94763080bc9d" /></p>
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Conclusion
 Congratulations! You've successfully deployed a web application using AWS. Along the way, you worked with these key services:
 
 <p>✅ EC2 – For hosting your application</p>
